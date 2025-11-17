@@ -62,7 +62,7 @@
 
 | Экран входа | Список заметок | Редактирование |
 |:---:|:---:|:---:|
-| <img src="Screenshots/login.png" width="250"> | <img src="Screenshots/notesPage.png" width="250"> | <img src="Screenshots/NoteEdit.png" width="250"> |
+| <img src="Screenshots/login.jpg" width="250"> | <img src="Screenshots/notesPage.jpg" width="250"> | <img src="Screenshots/NoteEdit.jpg" width="250"> |
 
 ## 🔮 Планы по улучшению
 
