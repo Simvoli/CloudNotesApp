@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CloudNotesApp.Views.NoteEditPage"
+             Title="Note edit">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="NetworkIndicator" 
+                Source="{Binding NetworkImageSource}" 
+                WidthRequest="24" HeightRequest="24"
+                HorizontalOptions="End"
+                Margin="0,0,10,0"/>
+
+            <Label x:Name="LastModifiedLabel"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                Margin="10,0,0,0"
+                FontAttributes="Italic"
+                TextColor="Gray"/>
+
+            <Editor x:Name="NoteEditor" Grid.Row="1" Placeholder="Enter your note..." />
+
+            <StackLayout Grid.Row="2" Orientation="Vertical" Padding="10" Spacing="10">
+                <Label Text="Save note:" />
+                <StackLayout Orientation="Horizontal">
+                    <RadioButton x:Name="RadioFirebase" Content="Into firebase" GroupName="SaveMethod" IsChecked="True"/>
+                    <RadioButton x:Name="RadioLocal" Content="Locally" GroupName="SaveMethod"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+                    <Button Text="Save" Clicked="OnSaveClicked"/>
+                    <Button Text="Delete" Clicked="OnDeleteClicked" x:Name="DeleteButton"/>
+                    <Button Text="Back" Clicked="OnBackClicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
